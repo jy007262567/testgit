@@ -1,10 +1,5 @@
-stages:
-- stage: A
-  jobs:
-  - job: A1
-  - job: A2
-
-- stage: B
-  jobs:
-  - job: B1
-  - job: B2
+pool:
+  name: myPrivateAgents    # your job runs on an agent in this pool
+  demands: agent.os -equals Windows_NT    # the agent must have this capability to run the job
+steps:
+- script: echo hello world
