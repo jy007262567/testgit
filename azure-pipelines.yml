@@ -1,5 +1,5 @@
 pool:
-  name: myPrivateAgents    # your job runs on an agent in this pool
-  demands: agent.os -equals Windows_NT    # the agent must have this capability to run the job
+  name: myPrivateAgents
+  demands: agent.os -equals Windows_NT
 steps:
 - script: echo hello world
