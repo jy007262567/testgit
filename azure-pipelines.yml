@@ -1,5 +1,10 @@
-pool:
-  name: myPrivateAgents
-  demands: agent.os -equals Windows_NT
-steps:
-- script: echo hello world
+stages:
+- stage: A
+  jobs:
+  - job: A1
+  - job: A2
+
+- stage: B
+  jobs:
+  - job: B1
+  - job: B2
